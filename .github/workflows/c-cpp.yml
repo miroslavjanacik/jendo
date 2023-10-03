@@ -1,0 +1,127 @@
+#include <stdio.h>
+
+int main()
+{
+    int obrazec = 6;
+    int a = 53;
+    int b = 64;
+
+    // scanf_s("%d%d%d", &obrazec, &a, &b);
+
+    // Square
+    if (obrazec == 0 || obrazec == 1 || obrazec == 2 || obrazec == 3 || obrazec == 6 || obrazec == 9)
+    {
+        if (obrazec == 0) {
+            for (int i = 0; i < b; i++)
+
+            {
+                for (int i = 0; i < a; i++)
+
+                {
+                    printf("x");
+                }
+                printf("\n");
+
+            }
+        }
+
+        //Rectangle with holes
+        if (obrazec == 1)
+        {
+            for (int i = 0; i < b; i++)
+            {
+                for (int s = 0; s < a; s++)
+                {
+                    if ((i == 0 || i == b - 1 || s == 0 || s == a - 1))
+                    {
+                        printf("x");
+                    }
+                    else
+                    {
+                        printf(" ");
+                    }
+                }
+                printf("\n");
+            }
+
+        }
+        // Rectangle with numbers 
+        if (obrazec == 2)
+        {
+            int cislo = 0;
+
+            for (int i = 0; i < b; i++)
+            {
+                for (int s = 0; s < a; s++)
+                {
+                    if ((i == 0 || i == b - 1 || s == 0 || s == a - 1))
+                    {
+                        printf("x");
+                    }
+                    else
+                    {
+
+                        printf("%d", cislo);
+                        cislo = (cislo + 1) % 10;
+                    }
+                }
+                printf("\n");
+            }
+
+        }
+        //Left diagonal short
+        if (obrazec == 3)
+        {
+
+            for (int i = 0; i < a; i++)
+            {
+                for (int s = 0; s < b; s++)
+                {
+
+                    if (i == s)
+                    {
+                        printf("x");
+                    }
+                    else
+                    {
+                        printf(" ");
+                    }
+                }
+                printf("\n");
+            }
+
+        }
+
+        if (obrazec == 6)
+        {
+            for (int i = 0; i < b; i++)
+            {
+                for (int s = 0; s < a; s++)
+                {
+                    if (i == 0 || s == a / 2)
+                    {
+                        printf("x");
+
+                    }
+                    else
+                    {
+                        printf(" ");
+                    }
+                }
+                printf("\n");
+
+            }
+
+
+
+        }
+
+
+
+    }
+    else {
+        printf("neplatny obrazec");
+    }
+
+    return 0;
+}
