@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Mirko\source\repos\alg\alg\main.cpp(10,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  alg.vcxproj -> C:\Users\Mirko\source\repos\alg\x64\Debug\alg.exe
